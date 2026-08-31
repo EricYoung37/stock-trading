@@ -96,6 +96,8 @@ ETF 中文叫作交易型开放式指数基金（简称“交易所交易基金�
 
 ## 2. 公司利润
 
+### 基础概念
+
 ```mermaid
 graph TD
     Rev["<b>营业收入 (Revenue)</b><br/>Top Line"] 
@@ -159,3 +161,116 @@ graph TD
     %% Important operating expense
     style Opex fill:#FFF8E1,stroke:#EF6C00,stroke-width:1px,color:#E65100
 ```
+
+### 例子：[NVIDIA Q2 Fiscal 2027 Summary](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027)
+
+**GAAP（Generally Accepted Accounting Principles）**
+
+| $ in millions, except earnings per share |  Q2 FY27 |  Q1 FY27 |  Q2 FY26 |     Q/Q |     Y/Y |
+| ---------------------------------------- | -------: | -------: | -------: | ------: | ------: |
+| Revenue                                  | $96,221M | $81,615M | $46,743M |     18% |    106% |
+| Gross margin                             |    75.0% |    74.9% |    72.4% | 0.1 pts | 2.6 pts |
+| Operating expenses                       |  $8,408M |  $7,621M |  $5,413M |     10% |     55% |
+| Operating income                         | $63,734M | $53,536M | $28,440M |     19% |    124% |
+| Net income                               | $59,688M | $58,321M | $26,422M |      2% |    126% |
+| Diluted earnings per share               |    $2.46 |    $2.39 |    $1.08 |      3% |    128% |
+
+**Non-GAAP（Non-Generally Accepted Accounting Principles）**
+
+| $ in millions, except earnings per share |  Q2 FY27 |  Q1 FY27 |  Q2 FY26 | Q/Q |     Y/Y |
+| ---------------------------------------- | -------: | -------: | -------: | --: | ------: |
+| Revenue                                  | $96,221M | $81,615M | $46,743M | 18% |    106% |
+| Gross margin                             |    75.0% |    75.0% |    72.5% |   — | 2.5 pts |
+| Operating expenses                       |  $8,232M |  $7,449M |  $5,361M | 11% |     54% |
+| Operating income                         | $63,956M | $53,783M | $28,541M | 19% |    124% |
+| Net income                               | $53,954M | $45,548M | $24,763M | 18% |    118% |
+| Diluted earnings per share               |    $2.22 |    $1.87 |    $1.01 | 19% |    120% |
+
+GAAP：按美国公认会计准则编制的财务数据；Non-GAAP：在 GAAP 基础上剔除公司认为不能代表正常经营表现的项目。两者通过 **reconciliation（调节表）** 连接，逐项说明从 GAAP 到 Non-GAAP 的调整及其金额。
+
+**（1） GAAP vs. Non-GAAP：这张表发生了什么变化？**
+
+| 指标                 |     GAAP | Non-GAAP |            变化 |
+| ------------------ | -------: | -------: | ------------: |
+| Revenue            | $96,221M | $96,221M |            不变 |
+| Gross Margin       |    75.0% |    75.0% |            不变 |
+| Operating Expenses |  $8,408M |  $8,232M |   **↓ $176M** |
+| Operating Income   | $63,734M | $63,956M |   **↑ $222M** |
+| Net Income         | $59,688M | $53,954M | **↓ $5,734M** |
+| Diluted EPS        |    $2.46 |    $2.22 |   **↓ $0.24** |
+
+* **Operating Expenses ↓ $176M**：Non-GAAP 剔除了一部分 GAAP 下计入运营费用的项目。
+* **Operating Income ↑ $222M**：由于运营费用减少，营业利润相应增加。
+* **Net Income ↓ $5,734M、Diluted EPS ↓ $0.24**：说明营业利润之后还有其他调整项目，其净影响反而减少了 Non-GAAP 的 Net Income 和 Diluted EPS。
+
+> **注意：Non-GAAP 并不意味着数字一定比 GAAP 高。** 它的目的不是“美化数字”，而是剔除公司认为不能代表正常经营表现的项目；最终是变高还是变低，要看具体调整项目。
+
+**（2） 为什么现在是 2026 年，却叫 FY27？**
+
+**FY（Fiscal Year，财年）** 通常按公司规定的财年结束年份命名。NVIDIA 的财年截至每年 1 月最后一个星期日，因此 **FY27 是截至 2027 年 1 月结束的财年**，虽然其中大部分时间发生在 2026 年。
+
+FY27 并不是“2026 + 1”的固定规则；不同公司可能采用不同的财年和命名方式，关键是看该公司的 Fiscal Year 定义。
+
+**（3） Q/Q / Y/Y 是什么意思？**
+
+* **Q/Q（Quarter-over-Quarter）**：与上一季度相比。
+* **Y/Y（Year-over-Year）**：与去年同期相比。
+
+**（4） 为什么 Non-GAAP Gross Margin 的 Q/Q 是 `--`？**
+
+Q1 和 Q2 都是 **75.0%**，变化为 **0.0 percentage points**，因此没有需要报告的变化。
+
+**（5） 为什么有 Revenue + Gross Margin，却没有 Gross Profit？**
+
+**Gross Margin 是衡量 NVIDIA 产品经济性、定价权（Pricing Power）和竞争力的核心指标。**“定价权”即公司即使保持较高价格或面对成本上涨，仍有能力让客户接受而无需大幅降价。
+
+毛利率没有统一的“好”标准，应与同行和自身历史水平比较；NVIDIA 的 **75% 已属于非常高的水平**。相比之下，Gross Profit 的绝对金额主要反映收入规模，在判断产品本身的盈利能力时不如 Gross Margin 直接，因此摘要表优先展示 Margin。
+
+**（6） 为什么 Operating Income 没有 Operating Margin？**
+
+Operating 层面的重点是**公司投入了多少，以及投入后赚了多少**：
+
+* **Operating Expenses**：反映研发、销售等经营投入；
+* **Operating Income**：反映扣除这些投入后留下的核心经营利润。
+
+因此两者的绝对金额都有较强的分析价值，摘要表优先展示它们，而省略可自行计算的 Operating Margin。
+
+**（7） 为什么 Gross Profit 不写 COGS，而 Operating Income 却写 Operating Expenses？**
+
+两个层级关注的问题不同：**Gross 层面重点观察产品本身的盈利能力，因此突出 Gross Margin；Operating 层面则需要观察经营投入及其最终产出，因此同时列出 Operating Expenses 和 Operating Income。**
+
+---
+
+#### 分析与总结
+
+这两张表最值得关注的不是单个数字，而是 **Revenue → Gross Margin → Operating Expenses → Operating Income → Net Income → EPS** 这一整条盈利链条。
+
+**（1） NVIDIA 的核心业务规模仍在高速扩张**
+
+Revenue 达到 **$96.2B**，Y/Y 增长 **106%**，意味着营收在一年内翻了一倍以上。更重要的是，Gross Margin 仍达到 **75.0%**，较去年同期 GAAP 的 72.4% 上升 **2.6 pts**。
+
+这说明 NVIDIA 不仅卖得更多，而且在收入高速增长的同时仍维持极高的毛利率，体现出很强的**产品需求、定价权和竞争优势**。
+
+**（2） 高毛利率让 NVIDIA 能够大规模投入研发，同时仍保持极高的经营利润**
+
+Operating Expenses 为 **$8.4B**，Y/Y 增长 **55%**，明显低于 Revenue 的 **106%** 增速；与此同时，Operating Income 增长 **124%**。
+
+这意味着 NVIDIA 的收入增长速度远高于运营费用增长速度，形成明显的**经营杠杆（Operating Leverage）**：规模扩大后，新增收入中的相当一部分能够转化为营业利润。
+
+**（3） Net Income 和 EPS 的增长说明最终盈利能力仍然非常强**
+
+GAAP Net Income Y/Y 增长 **126%**，Diluted EPS Y/Y 增长 **128%**，均超过 Revenue 的 106% 增速。
+
+也就是说，NVIDIA 不只是“卖得更多”，而是**利润增长速度进一步超过营收增长速度**。
+
+**（4） Q/Q 数据则显示增长仍在持续，但增速已经明显低于 Y/Y**
+
+Revenue Q/Q 增长 **18%**，Operating Income Q/Q 增长 **19%**，说明公司仍在快速扩张；但与 Y/Y 的三位数增长相比，季度环比增速明显较低。
+
+因此，这组数据同时体现了两件事：
+
+> **长期增长极强；短期增长依然强劲，但已经不是翻倍式增长。**
+
+**一句话总结：**
+
+> NVIDIA 在 Q2 FY27 实现了营收翻倍、75% 的超高毛利率，以及利润增速超过营收增速，体现出强劲的需求、定价权和经营杠杆；同时，Q/Q 增速低于 Y/Y 增速，说明公司仍高速增长，但增长率正在从极端高位逐渐正常化。
