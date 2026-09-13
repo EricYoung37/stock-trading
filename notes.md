@@ -94,7 +94,7 @@ ETF 中文叫作交易型开放式指数基金（简称“交易所交易基金�
 </details>
 
 
-## 2. 公司利润
+## 2. 利润表（Income Statement）
 
 ### 基础概念
 
@@ -188,6 +188,8 @@ graph TD
 
 GAAP：按美国公认会计准则编制的财务数据；Non-GAAP：在 GAAP 基础上剔除公司认为不能代表正常经营表现的项目。两者通过 **reconciliation（调节表）** 连接，逐项说明从 GAAP 到 Non-GAAP 的调整及其金额。
 
+---
+
 **（1） GAAP vs. Non-GAAP：这张表发生了什么变化？**
 
 | 指标                 |     GAAP | Non-GAAP |            变化 |
@@ -274,3 +276,169 @@ Revenue Q/Q 增长 **18%**，Operating Income Q/Q 增长 **19%**，说明公司�
 **一句话总结：**
 
 > NVIDIA 在 Q2 FY27 实现了营收翻倍、75% 的超高毛利率，以及利润增速超过营收增速，体现出强劲的需求、定价权和经营杠杆；同时，Q/Q 增速低于 Y/Y 增速，说明公司仍高速增长，但增长率正在从极端高位逐渐正常化。
+
+
+## 3. 资产负债表（Balance Sheet）
+
+### 例子：[NVIDIA 2027 Q2 10-Q — Balance Sheets](https://s201.q4cdn.com/141608511/files/doc_financials/2027/NVDA-2027-Q2-10Q-Final-including-exhibits.pdf?utm_source=chatgpt.com#page=5)
+
+**NVIDIA Corporation and Subsidiaries Condensed Consolidated Balance Sheets (Unaudited)**
+
+| $ in millions | Jul 26, 2026 | Jan 25, 2026 |
+|---|---:|---:|
+| **Assets** | | |
+| **Current assets:** | | |
+| Cash and cash equivalents | $22,443 | $10,605 |
+| Marketable debt securities | $34,143 | $39,065 |
+| Marketable equity securities | $42,783 | $12,886 |
+| Accounts receivable, net | $63,059 | $38,466 |
+| Inventories | $31,575 | $21,403 |
+| Prepaid expenses and other current assets | $3,409 | $3,180 |
+| **Total current assets** | **$197,412** | **$125,605** |
+| Property and equipment, net | $14,285 | $10,383 |
+| Operating lease assets | $5,390 | $2,867 |
+| Goodwill | $21,125 | $20,832 |
+| Intangible assets, net | $2,998 | $3,306 |
+| Deferred income tax assets | $12,159 | $13,258 |
+| Non-marketable securities | $51,157 | $22,251 |
+| Other assets | $15,746 | $8,301 |
+| **Total assets** | **$320,272** | **$206,803** |
+| | | |
+| **Liabilities and Shareholders’ Equity** | | |
+| **Current liabilities:** | | |
+| Accounts payable | $15,059 | $9,812 |
+| Accrued and other current liabilities | $26,960 | $21,352 |
+| Short-term debt | $1,000 | $999 |
+| **Total current liabilities** | **$43,019** | **$32,163** |
+| Long-term debt | $32,366 | $7,469 |
+| Long-term operating lease liabilities | $4,985 | $2,572 |
+| Other long-term liabilities | $10,918 | $7,306 |
+| **Total liabilities** | **$91,288** | **$49,510** |
+| Commitments and contingencies | | |
+| | | |
+| **Shareholders’ equity:** | | |
+| Preferred stock | — | — |
+| Common stock | $24 | $24 |
+| Additional paid-in capital | $9,828 | $10,118 |
+| Accumulated other comprehensive income (loss) | $(25) | $178 |
+| Retained earnings | $219,157 | $146,973 |
+| **Total shareholders’ equity** | **$228,984** | **$157,293** |
+| **Total liabilities and shareholders’ equity** | **$320,272** | **$206,803** |
+
+---
+
+**（1）Condensed & Consolidated & Unaudited**
+
+* **Condensed = 简明的 / 压缩版**
+
+  10-Q 不需要像 10-K 一样完整展示所有年度财务报表细节，因此采用简明（Condensed）的财务报表形式。更多详细信息可以在财务报表附注（Notes）中找到。
+
+* **Consolidated = 合并的**
+
+  把母公司和需要合并的子公司（Subsidiaries）作为一个经济整体来展示。公司之间的内部交易（Intercompany Transactions）会被抵消（Eliminated）。
+
+* **Unaudited = 未审计的**
+
+  不意味着公司随便填的数字，也不意味着完全没有任何检查，而是没有进行 10-K 那种完整的独立审计（Audit）。会计师通常会进行 Review（审阅），但 Review 的保证程度低于 Audit。
+
+**（2）Balance Sheet 的比较日期**
+
+10-Q 的 Balance Sheet 通常列出：
+
+* **本季度末（Current Quarter-end）**
+* **上一财年末（Previous Fiscal Year-end）**
+
+例如 NVIDIA Q2 FY27：
+
+**July 26, 2026 vs. January 25, 2026**
+
+二者都是公司在某个**时间点（Point in Time）**的财务状况，因此可以进行时点比较。
+
+**（3）Assets（资产）**
+
+公司拥有或控制、并预期能够带来未来经济利益的资源。
+
+* **Marketable Debt Securities = 可交易的债务类证券 / 债券类投资**
+
+  公司将暂时不用的资金投资于债券等债务证券，例如购买美国国债，从而获得利息（Interest）。
+
+* **Marketable Equity Securities = 可交易的权益类证券 / 股票类投资**
+
+  公司购买其他公司的股票，从而拥有该公司的部分股权，收益可能来自股价上涨以及股息（Dividends）。
+
+* **Accounts Receivable = 应收账款**
+
+  已经完成销售、已经有权收钱，但客户尚未付款的金额。
+
+**（4）Liabilities（负债）**
+
+公司欠别人、未来需要偿还或履行的义务。
+
+* **Accounts Payable = 应付账款**
+
+  公司已经收到商品或服务，但尚未付款，因此欠供应商的钱。
+
+  例如：购买原材料，已经收到商品和发票，但尚未付款。
+
+* **Accrued and Other Current Liabilities = 应计及其他流动负债**
+
+  已经产生、但尚未支付或结算的短期义务。
+
+  例如：已经发生但尚未支付的工资、税费和其他费用。
+
+* **Short-term Debt = 短期债务**
+
+  通常指一年以内到期的债务部分。
+
+* **Long-term Debt = 长期债务**
+
+  通常指超过一年以后到期的债务部分。
+
+**（5） Shareholders' Equity（股东权益）**
+
+把公司的资产全部变现、偿还所有负债后，理论上剩下属于股东的部分。
+
+$$
+\text{Shareholders' Equity} = \text{Assets} - \text{Liabilities}
+$$
+
+---
+
+### 分析与总结
+
+#### 分析与总结
+
+**（1）资产规模大幅扩大**
+
+Total Assets 从 **$206.8B 增加到 $320.3B**，六个月增加约 **$113.5B（+55%）**。其中 Total Current Assets 从 **$125.6B 增加到 $197.4B（+57%）**，说明这次资产扩张主要集中在流动资产。
+
+**（2）证券投资明显增加**
+
+Marketable Equity Securities 从 **$12.9B 增加到 $42.8B**，Non-marketable Securities 从 **$22.3B 增加到 $51.2B**。两项合计从约 **$35.1B 增加到 $93.9B**，说明 NVIDIA 持有的证券类投资在半年内明显增加。
+
+**（3）Accounts Receivable 和 Inventory 都明显增加**
+
+Accounts Receivable 从 **$38.5B 增加到 $63.1B（+64%）**，Inventories 从 **$21.4B 增加到 $31.6B（+47%）**。这意味着 NVIDIA 的资产中，有越来越多资金体现在客户尚未支付的应收账款和尚未出售的库存上，值得进一步关注这些资产后续的回收和消化情况。
+
+**（4）负债规模明显增加，但负债占总资产的比例仍然较低**
+
+Total Liabilities 从 **$49.5B 增加到 $91.3B（+84%）**，增长非常明显。其中 **Long-term Debt 从 $7.5B 增加到 $32.4B**，增加约 **$24.9B**，是负债增长最明显的项目，说明 NVIDIA 在这六个月中明显增加了长期债务。
+
+不过，截至 July 26, 2026，Total Liabilities 约占 Total Assets 的 **28.5%**，仍明显低于 Shareholders' Equity 所占的 **71.5%**。因此，虽然负债规模增长很快，但相对于公司的整体资产规模，负债占比仍然较低。
+
+**（5）短期偿债能力较强**
+
+Total Current Assets 为 **$197.4B**，Total Current Liabilities 为 **$43.0B**，流动资产约为流动负债的 **4.6 倍**。从资产负债表本身来看，NVIDIA 持有的流动资产规模明显高于短期需要偿还的负债。
+
+**总结：**
+
+> 六个月内，NVIDIA 的资产规模大幅扩大，尤其是证券投资、应收账款和库存增长明显；负债规模也显著增加，主要体现在长期债务，但负债占总资产的比例仍然较低。同时，公司拥有远高于流动负债的流动资产。截至 July 26, 2026，NVIDIA 的资产负债结构整体仍较为稳健。
+
+
+## 4. 现金流表（Cash Flow Statement）
+
+### 例子：[NVIDIA 2027 Q2 10-Q — Statements of Cash Flows](https://s201.q4cdn.com/141608511/files/doc_financials/2027/NVDA-2027-Q2-10Q-Final-including-exhibits.pdf?utm_source=chatgpt.com#page=8)
+
+**NVIDIA Corporation and Subsidiaries Condensed Consolidated Statements of Cash Flows (Unaudited)**
+
+TODO: income statement，balance sheet，cash flow，为何要3个一起看？单独看其中某个会出什么问题？同时看有什么新的视角？
