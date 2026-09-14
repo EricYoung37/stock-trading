@@ -271,9 +271,11 @@ Revenue Q/Q 增长 **18%**，Operating Income Q/Q 增长 **19%**，说明公司�
 
 因此，这组数据同时体现了两件事：
 
-> **长期增长极强；短期增长依然强劲，但已经不是翻倍式增长。**
+**长期增长极强；短期增长依然强劲，但已经不是翻倍式增长。**
 
-**一句话总结：**
+---
+
+**总结：**
 
 > NVIDIA 在 Q2 FY27 实现了营收翻倍、75% 的超高毛利率，以及利润增速超过营收增速，体现出强劲的需求、定价权和经营杠杆；同时，Q/Q 增速低于 Y/Y 增速，说明公司仍高速增长，但增长率正在从极端高位逐渐正常化。
 
@@ -404,8 +406,6 @@ $$
 
 ---
 
-### 分析与总结
-
 #### 分析与总结
 
 **（1）资产规模大幅扩大**
@@ -430,6 +430,8 @@ Total Liabilities 从 **$49.5B 增加到 $91.3B（+84%）**，增长非常明显
 
 Total Current Assets 为 **$197.4B**，Total Current Liabilities 为 **$43.0B**，流动资产约为流动负债的 **4.6 倍**。从资产负债表本身来看，NVIDIA 持有的流动资产规模明显高于短期需要偿还的负债。
 
+---
+
 **总结：**
 
 > 六个月内，NVIDIA 的资产规模大幅扩大，尤其是证券投资、应收账款和库存增长明显；负债规模也显著增加，主要体现在长期债务，但负债占总资产的比例仍然较低。同时，公司拥有远高于流动负债的流动资产。截至 July 26, 2026，NVIDIA 的资产负债结构整体仍较为稳健。
@@ -440,5 +442,200 @@ Total Current Assets 为 **$197.4B**，Total Current Liabilities 为 **$43.0B**�
 ### 例子：[NVIDIA 2027 Q2 10-Q — Statements of Cash Flows](https://s201.q4cdn.com/141608511/files/doc_financials/2027/NVDA-2027-Q2-10Q-Final-including-exhibits.pdf?utm_source=chatgpt.com#page=8)
 
 **NVIDIA Corporation and Subsidiaries Condensed Consolidated Statements of Cash Flows (Unaudited)**
+
+| $ in millions | Six Months Ended Jul 26, 2026 | Six Months Ended Jul 27, 2025 |
+| --- | ---: | ---: |
+| **Cash flows from operating activities:** | | |
+| Net income | $118,010 | $45,197 |
+| Stock-based compensation expense | $3,954 | $3,099 |
+| Depreciation and amortization | $2,124 | $1,280 |
+| Deferred income taxes | $982 | -$2,160 |
+| Gains from equity securities, net | -$23,707 | -$2,073 |
+| Other | $222 | -$196 |
+| Accounts receivable | -$24,590 | -$4,743 |
+| Inventories | -$10,204 | -$4,880 |
+| Prepaid expenses and other assets | -$6,480 | $946 |
+| Accounts payable | $4,125 | $2,255 |
+| Accrued and other current liabilities | $8,015 | $3,075 |
+| Other long-term liabilities | $1,970 | $979 |
+| **Net cash provided by operating activities** | **$74,421** | **$42,779** |
+| | | |
+| **Cash flows from investing activities:** | | |
+| Proceeds from sales and maturities of debt securities | $26,563 | $6,739 |
+| Proceeds from sales of equity securities | $7,241 | $70 |
+| Purchases of equity securities | -$42,404 | -$1,245 |
+| Purchases of debt securities | -$21,777 | -$14,108 |
+| Purchases related to property and equipment and intangible assets | -$4,434 | -$3,122 |
+| Acquisitions, net of cash acquired | -$298 | -$677 |
+| Other | -$15 | — |
+| **Net cash used in investing activities** | **-$35,124** | **-$12,343** |
+| | | |
+| **Cash flows from financing activities:** | | |
+| Proceeds related to issuance of debt, net of costs | $24,896 | — |
+| Proceeds related to employee stock plans | $515 | $370 |
+| Payments related to repurchases of common stock | -$39,044 | -$23,815 |
+| Dividends paid | -$6,290 | -$488 |
+| Payments related to employee stock plan taxes | -$4,531 | -$3,380 |
+| Groq, Inc. | -$2,944 | — |
+| Principal payments on property and equipment and intangible assets | -$92 | -$73 |
+| Other | $31 | — |
+| **Net cash used in financing activities** | **-$27,459** | **-$27,386** |
+| | | |
+| **Change in cash and cash equivalents** | **$11,838** | **$3,050** |
+| Cash and cash equivalents at beginning of period | $10,605 | $8,589 |
+| **Cash and cash equivalents at end of period** | **$22,443** | **$11,639** |
+
+---
+
+**（1） Operating Cash Flow（OCF，经营活动现金流）**
+
+公司在正常经营活动中实际产生的现金流入减去经营活动产生的现金流出后，剩余的现金。
+
+**（2） OCF-to-Net-Income Ratio**
+
+$$
+\text{OCF-to-Net-Income Ratio} = \frac{\text{Operating Cash Flow (OCF)}}{\text{Net Income}}
+$$
+
+用于比较公司的**会计利润**与**实际经营产生的现金**之间的关系。
+
+**（3） Capital Expenditures（CapEx，资本性支出）**
+
+公司为了维持或扩大经营能力，对 Property and Equipment（财产及设备）等长期资产进行的资本性投资。
+
+**（4） Free Cash Flow（FCF，自由现金流）**
+
+$$
+\text{FCF} = \text{Operating Cash Flow (OCF)} - \text{Capital Expenditures (CapEx)}
+$$
+
+这是一个常用的简化计算方式，用于衡量公司经营产生的现金，在扣除资本性支出后还剩下多少可自由支配的现金。
+
+**（5） Share Repurchases / Stock Buybacks（股票回购）**
+
+* **何时回购 / 好处：** 当公司认为自己的股票价格合理或被低估，并且没有更好的资金用途时，可以回购股票。
+  - **如果** Net Income（净利润）不变，则根据 $EPS = \frac{\text{Net Income}}{\text{Shares Outstanding}}$，流通股数减少会带来**更高的EPS**。
+  - **如果** P/E（Price-to-Earnings Ratio，市盈率）不变，则根据 $股价 = EPS \times P/E$，EPS 上升会带来**更高的股价**。
+
+* **何时不回购 / 坏处：** 如果公司明显高估时仍然大量回购，公司可能用远高于股票内在价值的现金买回股票，即**买入股票的实际价值低于公司支付的现金**，从而损害剩余股东的利益。此外，如果公司为了回购而大量借债，也可能增加财务风险。
+
+---
+
+#### 分析与总结
+
+**（1）Operating Cash Flow（OCF）大幅增长，经营产生现金的能力明显增强**
+
+NVIDIA 六个月的 OCF 从去年同期的 **$42.779B** 增加至 **$74.421B**，增加 **$31.642B**，同比增长约 **74%**。
+
+这说明 NVIDIA 不仅 Net Income 大幅增长，而且主营业务实际产生的现金也同步大幅增加，公司的**现金创造能力明显增强**。
+
+**（2）OCF-to-Net-Income Ratio 约为 63%，低于 100%，需要关注，但不能单独判断为坏事**
+
+六个月 Net Income 为 **$118.010B**，OCF 为 **$74.421B**：
+
+$$
+\text{OCF-to-Net-Income Ratio} = \frac{74.421}{118.010} \approx 63\%
+$$
+
+去年同期：
+
+$$
+\frac{42.779}{45.197} \approx 95\%
+$$
+
+因此，这一比例从约 **95% 降至 63%**。
+
+OCF 低于 Net Income，说明部分会计利润**尚未转化为同期现金**。从 Cash Flow Statement 来看，一个重要原因是 Accounts Receivable 和 Inventories 的增加：
+
+* Accounts Receivable：现金流影响 **-$24.590B**
+* Inventories：现金流影响 **-$10.204B**
+
+也就是说，NVIDIA 有相当一部分收入已经计入 Net Income，但客户尚未付款，或者现金已经投入库存，因此暂时没有转化为现金。
+
+**63% 本身不代表公司经营变差**，因为 NVIDIA 的 OCF 仍然同比增长约 74%，而且业务高速增长时，应收账款和库存往往会同步增加。
+
+但与去年同期约 **95%** 相比明显下降，说明**利润转化为现金的效率有所下降**，因此值得继续观察后续季度 Accounts Receivable 和 Inventory 是否继续以较快速度增长。
+
+**（3）FCF 非常高，意味着公司在完成资本性投资后仍产生大量可支配现金**
+
+NVIDIA 六个月：
+
+$$
+FCF = 74.421-4.434 = \$69.987B
+$$
+
+去年同期：
+
+$$
+FCF = 42.779-3.122 = \$39.657B
+$$
+
+因此 FCF 从约 **$39.7B** 增加至 **$70.0B**，增加约 **$30.3B**，同比增长约 **76%**。
+
+这意味着 NVIDIA 的主营业务在扣除资本性支出后，仍然能够留下非常大量的现金。
+
+这些现金可以用于回购股票、支付股息、偿还债务、进行收购、购买证券或继续投资业务，而不需要完全依赖外部融资。
+
+因此，高 FCF 通常意味着公司具有较强的**资金自主性和资本配置能力**。
+
+**（4）Investing Activities 大幅净流出，但主要不是因为 CapEx**
+
+NVIDIA 的 Net Cash Used in Investing Activities 从去年同期的 **-$12.343B** 增加至 **-$35.124B**。
+
+但这不能简单理解为 NVIDIA 大幅增加了对经营资产的投资。
+
+其中：
+
+* Purchases of Equity Securities：**-$42.404B**
+* Purchases of Debt Securities：**-$21.777B**
+* Purchases related to Property and Equipment and Intangible Assets：**-$4.434B**
+
+因此本期 Investing Activities 的大额现金流出主要来自**证券投资**，而不是 CapEx。
+
+这说明 NVIDIA 在产生大量现金后，也将相当一部分现金用于金融资产配置。
+
+**（5）NVIDIA 进行了非常大规模的股票回购，且回购金额明显高于去年同期**
+
+Repurchases of Common Stock：
+
+* 本期：**-$39.044B**
+* 去年同期：**-$23.815B**
+
+同比增加约 **$15.2B**，增幅约 **64%**。
+
+结合 NVIDIA 在本期产生约 **$70.0B 的 FCF**，可以看出公司将相当大一部分现金用于股票回购。
+
+从管理层的资本配置行为来看，大规模回购通常可以被理解为一个值得关注的**积极信号**：
+
+**管理层愿意用大量公司现金购买自己的股票，至少说明管理层认为将资本用于回购具有足够的吸引力，而不是认为这些现金必须全部留在公司或投入其他项目。**
+
+但它不是“管理层认为股价一定会上涨”的直接证据，因为公司回购也可能出于股权稀释管理、资本返还政策等其他原因。
+
+**（6）公司同时发行了大量债务，需要结合回购一起观察**
+
+NVIDIA 本期通过发行债务获得 **$24.896B**，而去年同期没有类似的大额债务发行。
+
+与此同时，本期进行了 **$39.044B** 的股票回购。
+
+因此，本期 NVIDIA 一方面产生了非常强的经营现金流，另一方面又主动增加债务融资并进行大规模资本配置。
+
+这并不意味着公司缺钱——NVIDIA 本身拥有很强的现金创造能力——但说明公司正在积极利用**债务融资 + 经营现金流**进行资本配置。
+
+由于 Total Liabilities 仍然相对于 Total Assets 较低，因此目前的债务规模整体仍处于较强的资产基础之上，但后续可以继续观察债务增加是否持续。
+
+**（7）期末现金明显增加，整体现金流状况较强**
+
+NVIDIA 本期 **Change in Cash and Cash Equivalents** 为 **+$11.838B**，去年同期为 **+$3.050B**。
+
+也就是说，本期 NVIDIA 在进行了大规模证券投资、股票回购、股息支付以及其他资本配置之后，现金及现金等价物仍然实现了明显的净增加，而且净增加额较去年同期进一步扩大。
+
+这说明 NVIDIA 当前的**经营现金流和 FCF 规模非常强，足以支撑大规模的资本配置，同时仍能增加现金储备**。
+
+---
+
+**总结：**
+
+整体来看，NVIDIA 本期的 Cash Flow Statement 表现非常强：**Operating Cash Flow 和 FCF 大幅增长，虽然利润转化为现金的比例有所下降，但主要需要继续关注 Accounts Receivable 和 Inventories；同时公司进行了大规模证券投资、股票回购和股息支付，并主动增加债务融资，但期末现金仍明显增加。** 这说明 NVIDIA 当前具有非常强的现金创造能力和较大的资本配置空间。
+
 
 TODO: income statement，balance sheet，cash flow，为何要3个一起看？单独看其中某个会出什么问题？同时看有什么新的视角？
