@@ -638,4 +638,33 @@ NVIDIA 本期 **Change in Cash and Cash Equivalents** 为 **+$11.838B**，去年
 整体来看，NVIDIA 本期的 Cash Flow Statement 表现非常强：**Operating Cash Flow 和 FCF 大幅增长，虽然利润转化为现金的比例有所下降，但主要需要继续关注 Accounts Receivable 和 Inventories；同时公司进行了大规模证券投资、股票回购和股息支付，并主动增加债务融资，但期末现金仍明显增加。** 这说明 NVIDIA 当前具有非常强的现金创造能力和较大的资本配置空间。
 
 
-TODO: income statement，balance sheet，cash flow，为何要3个一起看？单独看其中某个会出什么问题？同时看有什么新的视角？
+## 5. 三大财报总结
+
+### 三张财报分别侧重什么？
+
+* Income Statement（利润表）：**“赚了多少”**
+* Balance Sheet（资产负债表）：**“家底和财务结构”**
+* Cash Flow Statement（现金流量表）：**“钱是不是真的产生了，以及钱去了哪里”**
+
+### 三张财报需要结合起来看
+
+利润、资产负债和现金流描述的是公司的不同维度，单独看任何一张都可能产生片面的判断。
+
+例如：
+
+* **Income Statement 说公司很赚钱，但 Cash Flow Statement 可能告诉你：大量利润还没有收到现金**，因为 Accounts Receivable 大幅增加。
+* **Balance Sheet 显示公司拥有大量 Assets，但仅凭这一点无法判断这些资产是如何形成的、是否对应真实的现金创造能力**，需要结合 Income Statement 和 Cash Flow Statement 判断资产增长是否伴随着盈利和现金流增长。
+* **Cash Flow Statement 显示现金增加**，但 Balance Sheet 可能告诉你，这些**现金的一部分来自大量 Debt**，而不是经营产生的。
+* 反过来，如果三张表**相互印证：** Revenue / Net Income 高速增长 → OCF 和 FCF 同步增长 → Assets 和 Equity 健康增长、Debt 可控，那么公司的经营、盈利、现金创造能力和财务结构就形成了相互印证的完整信息，**对公司财务状况的判断也更加全面、可靠。**
+
+### 结合 NVIDIA Q2 FY27 看三张财报
+
+可以将三张财报理解成一条完整的链：
+
+**Income Statement：公司赚得越来越多**
+↓
+**Cash Flow Statement：这些利润能够转化成大量真实现金**
+↓
+**Balance Sheet：这些利润和现金最终形成了更强的资产基础，同时 Debt 仍处于可控水平**
+
+三张财报相互印证，说明 NVIDIA 当前的高速增长具有较强的**财务支撑**。不过，Accounts Receivable 和 Inventories 增长较快，使利润向现金的转换效率有所下降，仍需持续关注。
