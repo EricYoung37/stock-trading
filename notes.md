@@ -51,10 +51,22 @@ graph TD
     style E fill:#FFEBEE,stroke:#C62828,stroke-width:2px,color:#B71C1C
 ```
 
-### 市值（Market Cap）
-市值代表了一家上市公司在当前公开市场上“整体值多少钱”。
-- Capitalization = 值（资本化、资本总额或价值）
-- Market Cap = Stock Price × Shares Outstanding
+### 市值（Market Capitalization）
+市值代表全体**股东**在公开市场上拥有的公司权益总价值。
+
+$$
+\text{Market Cap} = \text{Stock Price} \times \text{Shares Outstanding}
+$$
+
+### 企业价值（Enterprise Value）
+企业价值（Enterprise Value, EV）衡量公司的**整体经营业务价值**，考虑了公司的市值、债务和现金。
+
+$$
+\textbf{Enterprise Value} \approx \text{Market Cap} + \text{Debt} - \text{Cash}
+$$
+
+- **收购视角：** 收购公司不仅要支付股权价值，还需考虑其债务；公司持有的现金则可以抵消部分成本。
+- **当 Cash > Debt 时：** EV 会低于 Market Cap。这不代表公司的业务价值较低，而是因为公司持有的净现金降低了收购整体业务所需的净成本。若公司业务前景良好、市场估值较高，EV 仍然可能很高。
 
 ### 股票指数（Stock Market Index / Index）
 指数是指用来衡量整个市场或某个特定群体总体走势的“平均指标”。
@@ -102,13 +114,13 @@ ETF 中文叫作交易型开放式指数基金（简称“交易所交易基金�
 graph TD
     Rev["<b>营业收入 (Revenue)</b><br/>Top Line"] 
     
-    COGS["➖ 营业成本 (Cost of Goods Sold)<br/><small>含原材料采购费、工厂生产线工人的工资等</small>"]
+    COGS["➖ 营业成本 (Cost of Goods Sold)<br/><small>如原材料采购费、工厂生产线工人的工资等<br/><b>含 depreciation 和 amoritzation</b></small>"]
     GP["毛利润 (Gross Profit)"]
     
     GMCalc["➗ 营业收入 (Revenue)"]
     GM["<b>毛利率 (Gross Margin)</b>"]
     
-    Opex["<b>➖ 运营费用 (Operating Expenses)</b><br/><small>含 SG&A, R&D</small>"]
+    Opex["<b>➖ 运营费用 (Operating Expenses)</b><br/><small>如 SG&A, R&D<br/><b>含 depreciation 和 amortization</b></small>"]
     OI["<b>营业利润 (Operating Income)</b>"]
     
     OMCalc["➗ 营业收入 (Revenue)"]
@@ -514,8 +526,8 @@ $$
 **（5） Share Repurchases / Stock Buybacks（股票回购）**
 
 * **何时回购 / 好处：** 当公司认为自己的股票价格合理或被低估，并且没有更好的资金用途时，可以回购股票。
-  - **如果** Net Income（净利润）不变，则根据 $EPS = \frac{\text{Net Income}}{\text{Shares Outstanding}}$，流通股数减少会带来**更高的EPS**。
-  - **如果** P/E（Price-to-Earnings Ratio，市盈率）不变，则根据 $股价 = EPS \times P/E$，EPS 上升会带来**更高的股价**。
+  - **如果** Net Income（净利润）不变，则根据 $\text{EPS} = \frac{\text{Net Income}}{\text{Shares Outstanding}}$，流通股数减少会带来**更高的EPS**。
+  - **如果** P/E（Price-to-Earnings Ratio，市盈率）不变，则根据 $\text{price} = \text{EPS} \times \text{P/E}$，EPS 上升会带来**更高的股价**。
 
 * **何时不回购 / 坏处：** 如果公司明显高估时仍然大量回购，公司可能用远高于股票内在价值的现金买回股票，即**买入股票的实际价值低于公司支付的现金**，从而损害剩余股东的利益。此外，如果公司为了回购而大量借债，也可能增加财务风险。
 
@@ -635,7 +647,7 @@ NVIDIA 本期 **Change in Cash and Cash Equivalents** 为 **+$11.838B**，去年
 
 **总结：**
 
-整体来看，NVIDIA 本期的 Cash Flow Statement 表现非常强：**Operating Cash Flow 和 FCF 大幅增长，虽然利润转化为现金的比例有所下降，但主要需要继续关注 Accounts Receivable 和 Inventories；同时公司进行了大规模证券投资、股票回购和股息支付，并主动增加债务融资，但期末现金仍明显增加。** 这说明 NVIDIA 当前具有非常强的现金创造能力和较大的资本配置空间。
+> 整体来看，NVIDIA 本期的 Cash Flow Statement 表现非常强：**Operating Cash Flow 和 FCF 大幅增长，虽然利润转化为现金的比例有所下降，但主要需要继续关注 Accounts Receivable 和 Inventories；同时公司进行了大规模证券投资、股票回购和股息支付，并主动增加债务融资，但期末现金仍明显增加。** 这说明 NVIDIA 当前具有非常强的现金创造能力和较大的资本配置空间。
 
 
 ## 5. 三大财报总结
@@ -668,3 +680,195 @@ NVIDIA 本期 **Change in Cash and Cash Equivalents** 为 **+$11.838B**，去年
 **Balance Sheet：这些利润和现金最终形成了更强的资产基础，同时 Debt 仍处于可控水平**
 
 三张财报相互印证，说明 NVIDIA 当前的高速增长具有较强的**财务支撑**。不过，Accounts Receivable 和 Inventories 增长较快，使利润向现金的转换效率有所下降，仍需持续关注。
+
+
+## 6. Valuation Multiples（估值倍数）
+
+### 核心逻辑
+
+$$
+Multiple=\frac{你现在付出的价格}{你得到的某种经济产出}
+$$
+
+| 指标               | 分子         | 分母              | 核心本质 |
+| ------------------ | ------------ | ----------------- | -------------------------- |
+| **Trailing P/E**   | Market Cap   | 已实现 Net Income | **历史盈利定价度**：市场当前给公司过去已经实现的盈利多少倍估值，用实际结果检验当前估值是否已经很高。 |
+| **Forward P/E**    | Market Cap   | 预期 Net Income   | **未来盈利预期定价度**：市场当前的估值，在未来盈利达到预期的情况下是多少倍；反映投资者为未来增长提前支付了多少估值。 |
+| **PEG**            | P/E          | Earnings Growth   | **增长与估值的匹配度**：把 P/E 放到盈利增长速度的背景下，看较高估值是否有相应的增长预期支撑。 |
+| **P/S**            | Market Cap   | Revenue           | **收入规模定价度**：当盈利暂时不适合比较时，先看市场愿意给公司的收入规模多少倍估值；但它本身不判断收入是否赚钱。 |
+| **P/B**            | Market Cap   | Book Value        | **市场价值 vs. 账面净资产**：看市场愿意为公司账面净资产支付多少溢价，尤其适合资产本身就是核心生产要素的行业。 |
+| **EV/Revenue**     | EV           | Revenue           | **整个企业的收入定价度**：在考虑 Debt 和 Cash 后，看市场给公司的收入规模多少倍企业价值；比 P/S 更能反映资本结构差异。 |
+| **EV/EBITDA**      | EV           | EBITDA            | **经营业务估值 vs. 经营盈利能力**：尽量减少融资结构、税负和折旧摊销差异对比较的影响，看市场给核心经营业务多少倍 EBITDA 估值。 |
+
+
+
+### 例子：[NVDA Key Statistics: Current vs. Historical (10/4/2026)](https://finance.yahoo.com/quote/NVDA/key-statistics/)
+
+| Metric | Current | 7/31/2026 | 4/30/2026 | 1/31/2026 | 10/31/2025 | 7/31/2025 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Market Cap** | 5.45T | 4.85T | 4.83T | 4.65T | 4.92T | 4.34T |
+| **Enterprise Value** | 5.42T | 4.78T | 4.78T | 4.60T | 4.88T | 4.29T |
+| **Trailing P/E** | 28.51 | 30.74 | 40.73 | 47.31 | 57.69 | 57.38 |
+| **Forward P/E** | 24.88 | 22.88 | 24.57 | 24.94 | 31.55 | 39.84 |
+| **PEG Ratio (5yr expected)** | 0.48 | 0.55 | 0.63 | 0.72 | 0.92 | 1.72 |
+| **Price/Sales** | 18.16 | 19.37 | 22.66 | 25.11 | 30.22 | 29.62 |
+| **Price/Book** | 23.78 | 24.80 | 30.73 | 39.07 | 49.15 | 51.65 |
+| **Enterprise Value/Revenue** | 17.89 | 18.85 | 22.15 | 24.55 | 29.53 | 28.92 |
+| **Enterprise Value/EBITDA** | 23.18 | 24.77 | 33.08 | 38.59 | 47.27 | 47.14 |
+
+---
+
+**（1）P/E**
+
+P/E（Price-to-Earnings Ratio，市盈率）衡量市场愿意为公司每 $1 净利润支付多少倍的价格，**反映了市场对公司未来盈利能力和成长预期的估值**。
+
+$$
+\begin{gathered}
+\text{P/E} = \frac{\textbf{Market Cap}}{\textbf{Net Income}}
+= \frac{\text{Price} \times \text{Shares Outstanding}}{\text{EPS} \times \text{Shares Outstanding}}
+= \frac{\textbf{Price}}{\textbf{EPS}} \\[12pt]
+\text{Forward P/E} = \frac{\text{Current Price}}{\textbf{Expected Future EPS}} \\[12pt]
+\text{Trailing P/E} = \frac{\text{Current Price}}{\textbf{TTM (Trailing Twelve Months) EPS}}
+\end{gathered}
+$$
+
+**（2）PEG**
+
+PEG（Price/Earnings-to-Growth Ratio，市盈率相对盈利增长比率）用于衡量股票估值与**预期**盈利增长的匹配度，通常 **PEG 越低，股票的估值吸引力越高**。
+
+$$
+\text{PEG} = \frac{\text{P/E}}{\text{Earnings Growth Rate (e.g., Expected CAGR)}}
+$$
+
+**例子：**
+
+| Metric | Company A | Company B | Company C | Company D |
+|---|---|---|---|---|
+| P/E | 20 | 40 | 20 | 40 |
+| Growth | 20% | 40% | 40% | 20% |
+| PEG | 1 | 1 | 0.5 | 2 |
+
+- **A 和 B：** B 的 P/E 是 A 的 2 倍，但预期增长率也是 2 倍，因此 PEG 相同，即相对于各自的预期增长速度，两者的估值水平相近。
+- **A 和 C：** P/E 相同，但 C 的预期增长率更高，意味着投资者支付相同的估值，可以期待更快的盈利增长，因此 C 的估值相对更有吸引力。
+- **B 和 D：** P/E 相同，但 D 的预期增长率更低，意味着投资者支付相同的估值，却只能期待更慢的盈利增长，因此 D 的估值相对缺乏吸引力。
+
+**（3）P/S**
+
+P/S（Price-to-Sales Ratio，市销率）衡量市场愿意为公司每 $1 的营业收入支付多少价格，可在**考虑收入规模的同时比较市场估值**，尤其适用于 P/E 难以使用的公司，但**无法反映收入的盈利能力**。
+
+$$
+\text{P/S} = \frac{\text{Market Cap}}{\textbf{Revenue}} = \frac{\textbf{Price}}{\textbf{Sales Per Share}}
+$$
+
+**例子：**
+
+| Metric | Company A | Company B | Company C | Company D |
+|---|---|---|---|---|
+| P/E | — | < 0 | 20× | 20× |
+| P/S | 5× | 5× | 4× | 2× |
+
+- **A 和 B：** A 尚未盈利，B 处于亏损状态，因此 P/E 无法正常用于估值比较。P/S 仍可衡量市场对每 $1 营业收入的估值，但相同的 P/S 不代表两家公司的盈利能力相同。
+- **C 和 D：** 两家成熟公司的 P/E 相同，但 C 的 P/S 更高，说明 C 的净利润率更低，即每 $1 营业收入转化为的净利润更少。因此，分析成熟公司时，应结合 P/S 与 P/E，了解收入转化为利润的效率。
+
+**（4）P/B**
+
+P/B（Price-to-Book Ratio，市净率）衡量市场愿意为公司每 $1 的**账面股东权益**支付多少价格，用于比较公司的市场估值与账面净资产。
+
+$$
+\text{P/B} = \frac{\text{Market Cap}}{\textbf{Shareholders' Equity}} \approx \frac{\textbf{Price}}{\textbf{Book Value Per Share}}
+$$
+
+**例子：**
+
+| Metric | Company A | Company B |
+|---|---|---|
+| Market Cap | $200B | $80B |
+| Book Value | $50B | $100B |
+| P/B | 4× | 0.8× |
+
+- **A：** 账面净资产较少，但品牌、技术、软件、客户关系等竞争优势可能创造大量未来利润，因此市场愿意给予较高估值。例如，部分传媒公司。
+- **B：** 账面净资产较多，但如果资产的盈利能力较弱，市场可能给予较低估值。例如，部分银行、保险公司。
+
+**（5）EV/Revenue**
+
+EV/Revenue（Enterprise Value-to-Revenue，企业价值与营收比率）衡量企业价值相对于营收规模的高低。与 P/S 相比，它将债务和现金纳入考量。
+
+**例子：**
+
+| Metric | Company A | Company B |
+|---|---:|---:|
+| Market Cap | $100B | $100B |
+| Debt | $0B | $80B |
+| Cash | $0B | $0B |
+| Revenue | $20B | $20B |
+| P/S | 5× | 5× |
+| EV/Revenue | 5× | 9× |
+
+- **股东角度（P/S）：** A 和 B 的 P/S 相同，说明市场给予两家公司的股权相对于营收的估值相同。但 P/S 不考虑债务，无法反映两家公司的财务风险差异。B 的债务若能带来足够回报，可能有利于股东；否则可能增加财务负担。
+- **企业角度（EV/Revenue）：** B 的 EV/Revenue 更高，主要因为其债务增加了 EV。这个差异反映了资本结构的不同，但不能单凭该指标判断 B 的经营表现或增长前景是否足以支撑其估值。
+
+**（6）EV/EBTIDA**
+
+EV/EBITDA（Enterprise Value-to-EBITDA）衡量企业价值相对于经营盈利能力的高低。由于不考虑利息、税项、折旧和摊销，**在一定程度上减少了融资结构及折旧摊销差异的影响，常用于比较业务相似但融资结构不同的公司**。
+
+**例子：**
+
+A 的 EV/EBITDA 高于 B，说明市场给予 A 每单位 EBITDA 的企业价值更高，但原因可能不同：
+- **Debt 更高：** A 的 EV 可能因债务较高而增加，但这也意味着更高的财务风险。
+- **EBITDA 更低：** A 当前的经营盈利能力较弱，但市场可能看好其未来增长或盈利稳定性，因此给予更高的估值倍数。
+- **市场定价过高：** A 的估值倍数可能缺乏基本面支撑。
+
+#### 分析与总结
+
+**（1）估值倍数普遍下降**
+
+以 2025 年 7 月 31 日到 Current 为例：
+
+| Metric | 7/31/2025 | Current | Change |
+|---|---:|---:|---:|
+| Trailing P/E | 57.38× | 28.51× | −50% |
+| Forward P/E | 39.84× | 24.88× | −38% |
+| PEG (5yr expected) | 1.72 | 0.48 | −72% |
+| P/S | 29.62× | 18.16× | −39% |
+| P/B | 51.65× | 23.78× | −54% |
+| EV/Revenue | 28.92× | 17.89× | −38% |
+| EV/EBITDA | 47.14× | 23.18× | −51% |
+| Market Cap | $4.34T | $5.45T | +26% |
+
+估值倍数普遍下降，但市值反而增长 26%。这是因为估值倍数的分母（盈利、营收等）相对于分子（市场价值）增长得更快。
+
+**（2）Trailing P/E 下降得比 Forward P/E 更明显**
+
+- **Trailing P/E：** 从 57.38× 降至 28.51×，说明过去 12 个月的盈利相对于股价显著增长。
+- **Forward P/E：** 从 39.84× 降至 24.88×，降幅较小，反映预期未来盈利相对于股价的变化较小。
+
+历史盈利增长可能是估值倍数下降的重要原因，但仅凭这些数据无法区分盈利增长与股价变化各自的贡献。
+
+**（3）PEG 大幅下降，但不代表股票必然被低估**
+
+PEG 从 1.72 降至 0.48，说明相对于五年预期盈利增长率，当前 P/E 更低。但 PEG 依赖未来增长预期，也受计算方法影响，仍需判断预期能否兑现。
+
+**（4）P/S 与 EV/Revenue 同步下降**
+
+- P/S：29.62× → 18.16×
+- EV/Revenue：28.92× → 17.89×
+
+两者均下降约 38%–39%，说明市场给予每单位营收的估值倍数降低。两者趋势相似，但 P/S 以市值为分子，EV/Revenue 则将债务和现金纳入考量。
+
+**（5）P/B 大幅下降，但仍处于高位**
+
+P/B 从 51.65× 降至 23.78×，说明市值相对于账面股东权益的倍数显著下降。由于 NVIDIA 的技术、生态系统等价值未必充分反映在账面净资产中，P/B 更适合作为辅助指标。
+
+**（6）EV/EBITDA 下降约一半**
+
+EV/EBITDA 从 47.14× 降至 23.18×，说明企业价值相对于 EBITDA 的倍数明显下降。但 EBITDA 不等于现金流，也未扣除资本支出，因此还需结合自由现金流分析。
+
+---
+
+**总结：**
+
+- **市值上升，估值倍数下降：** 盈利、营收等指标相对于市场价值增长得更快。
+- **历史盈利增长值得关注：** Trailing P/E 大幅下降，反映当前市值相对于过去 12 个月盈利的倍数明显降低。
+- **未来增长决定估值能否持续：** PEG、Forward P/E 等指标依赖预期，仍需结合实际业绩判断。
+
+> **估值倍数下降不等于股价下跌，估值倍数较低也不等于股票必然被低估。**
